@@ -23,15 +23,15 @@ def take_command():
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
             command = command.lower()
-            if 'ramya' in command:
-                command = command.replace('ramya', '')
+            if 'Alexa' in command:
+                command = command.replace('Alexa', '')
                 print(command)
     except:
         pass
     return command
 
 
-def run_ramya():
+def run_Alexa():
     command = take_command()
     print(command)
     if 'play' in command:
@@ -47,13 +47,13 @@ def run_ramya():
         print(info)
         talk(info)
     elif 'name' in command:
-        talk('My name is Ramya')
+        talk('My name is Alexa')
     elif 'are you single' in command:
         talk('I am in a relationship with wifi')
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     else:
-        talk('I love you.')
+        talk('How can I help you?')
 
 while True:
     run_ramya()
