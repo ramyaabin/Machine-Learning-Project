@@ -53,7 +53,7 @@ def run_Alexa():
     elif 'joke' in command:
         talk(pyjokes.get_joke())
     else:
-        talk('How can I help you?')
+        talk('How can I help you??')
 
 while True:
     run_Alexa()
